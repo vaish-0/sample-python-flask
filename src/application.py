@@ -1,13 +1,17 @@
 #!flask/bin/python
 from flask import Flask
 from flaskrun import flaskrun
+from flask import render_template
 
 application = Flask(__name__)
 
 
 @application.route('/', methods=['GET'])
-def get():
-    return '{"Output":"Hello World"}'
+@application.route('/hello/')
+@application.route('/hello/<name>')
+def hello(name=None):
+    # return '{"Output":"Hello World"}'
+    return render_template('hello.html', name=name)
 
 
 @application.route('/', methods=['POST'])
