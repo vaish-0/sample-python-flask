@@ -2,27 +2,27 @@ version: 0.0
 os: linux
 files:
  - source: /src
-   destination: /home/ubuntu/python-flask-service
+   destination: /home/ec2-user/python-flask-service
  - source: requirements.txt
-   destination: /home/ubuntu/python-flask-service
+   destination: /home/ec2-user/python-flask-service
 permissions:
-  - object: /home/ubuntu/python-flask-service/application.py
-    owner: ubuntu
+  - object: /home/ec2-user/python-flask-service/application.py
+    owner: ec2-user
     mode: 644
     type:
       - file
-  - object: /home/ubuntu/python-flask-service/flaskrun.py
-    owner: ubuntu
+  - object: /home/ec2-user/python-flask-service/flaskrun.py
+    owner: ec2-user
     mode: 644
     type:
       - file
-  - object: /home/ubuntu/python-flask-service/requirements.txt
-    owner: ubuntu
+  - object: /home/ec2-user/python-flask-service/requirements.txt
+    owner: ec2-user
     mode: 644
     type:
       - file
-  - object: /home/ubuntu/python-flask-service/supervisor.conf
-    owner: ubuntu
+  - object: /home/ec2-user/python-flask-service/supervisor.conf
+    owner: ec2-user
     mode: 644
     type:
       - file
